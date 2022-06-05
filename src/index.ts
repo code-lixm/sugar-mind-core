@@ -1,3 +1,5 @@
+import Minder from "./core/minder";
+import Command from "./core/command";
 import "./sugar-mind.css";
 
 // import SM from "./core/index.js";
@@ -8,3 +10,10 @@ import "./sugar-mind.css";
 // SM.use(Minder);
 // SM.use(Command);
 // SM.use(Node);
+
+export default class SugarMind {
+  static readonly Minder = Minder;
+  static readonly Command = Command;
+  // static readonly Event = Event;
+  // static readonly Node = Node;
+}
