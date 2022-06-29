@@ -1,14 +1,13 @@
 import type { Options } from "../../types";
 
-import Minder from "./minder";
+// import Minder from "./minder";
 import { DEFAULT_OPTIONS } from "../config";
 
-export default class MinderOptions extends Minder {
+export default class MinderOptions {
   private options: Options;
   private readonly defaultOptions: Options = DEFAULT_OPTIONS;
 
   constructor(options: Partial<Options>) {
-    super(options);
     this.defaultOptions = DEFAULT_OPTIONS;
     this.options = { ...this.defaultOptions, ...options };
   }

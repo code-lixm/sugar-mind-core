@@ -1,13 +1,13 @@
 {
-  "name": "vite-vanilla-ts-lib-starter",
+  "name": "sugar-minder",
   "private": true,
   "version": "0.0.0",
-  "main": "./dist/vite-ts-lib-starter.cjs",
-  "module": "./dist/vite-ts-lib-starter.mjs",
+  "main": "./dist/sugar-minder.cjs",
+  "module": "./dist/sugar-minder.mjs",
   "exports": {
     ".": {
-      "require": "./dist/vite-ts-lib-starter.cjs",
-      "import": "./dist/vite-ts-lib-starter.mjs"
+      "require": "./dist/sugar-minder.cjs",
+      "import": "./dist/sugar-minder.mjs"
     }
   },
   "scripts": {
@@ -44,6 +44,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.1.2"
+    "@svgdotjs/svg.js": "^3.1.2",
+    "lodash-es": "^4.17.21"
   }
 }

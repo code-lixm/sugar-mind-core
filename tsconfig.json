@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "rootDir": "./src",
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -16,7 +17,11 @@
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["src/types"],
-    "types": ["vite/client", "node", "jest"]
+    "types": ["vite/client", "node", "jest"],
+    "paths": {
+      "@/*": ["src/*"],
+      "types/*": ["types/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "types/index.d.ts"],
   "exclude": ["**/*.test.ts", "node_modules", "test/**", ".history/**"]

@@ -1,7 +1,7 @@
 export const DEFAULT_OPTIONS = {
+  render: "body",
   enableKeyReceiver: true,
   zoom: [20, 50, 100, 120, 200],
-  images: [],
 };
 
 export const COMMAND_STATE_DISABLED = 0;

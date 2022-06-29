@@ -1,19 +1,35 @@
-import Minder from "./core/minder";
-import Command from "./core/command";
+import type { Options } from "types";
+
+import Minder from "@/core/minder";
+import Command from "@/core/command";
+import Theme from "@/core/theme";
+
+// import MinderOptions from "@/core/options";
 import "./sugar-mind.css";
 
-// import SM from "./core/index.js";
-// import Minder from "./core/minder.js";
-// import Command from "./core/command.tjs";
-// import Node from "./core/node.ts";
-
-// SM.use(Minder);
-// SM.use(Command);
-// SM.use(Node);
-
+/**
+ * @class: SugarMind
+ * @classdesc: exposed instance
+ */
 export default class SugarMind {
+  // mount special class
   static readonly Minder = Minder;
   static readonly Command = Command;
-  // static readonly Event = Event;
-  // static readonly Node = Node;
+  static readonly Theme = Theme;
+
+  constructor(options: Partial<Options>) {
+    return new Minder(options);
+  }
+
+  // register different module
+  static register<T>(name: string, module: T) {
+    switch (name) {
+      case "theme":
+        Theme.register(name, module);
+        break;
+
+      default:
+        break;
+    }
+  }
 }

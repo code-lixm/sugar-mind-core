@@ -8,10 +8,10 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-    <!-- <script>
-      const minder = new SugarMind()
-      minder.renderTo('#app')
-    </script> -->
+    <script type="module">
+      import SugarMind from "/src/index.ts";
+      const minder = new SugarMind({ render: "#app" });
+      console.log("minder: ", minder);
+    </script>
   </body>
 </html>
